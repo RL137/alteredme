@@ -1,0 +1,109 @@
+*{
+	margin: none;
+	padding: 0;
+	border: none;
+}
+
+body{
+	height:100vh;
+	width:100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	flex-direction: column;
+	gap: 5px;
+	background: radial-gradient(circle, #000050, #0000f1);
+}
+
+.img-container {
+	width: 640px;
+	height: 360px;
+	overflow: hidden;
+	border-radius: 32px;
+	position: relative;
+}
+
+/*Img-Container*/
+img {
+	position: absolute;
+}
+
+.face{
+	width: 220px;
+	height: 220px;
+}
+
+.img-container{
+	display: flex;
+	justify-content: center;
+	align-items: end;
+}
+
+.frame{
+	width: 640px;
+}
+
+/*Elemets order*/
+#background{
+	z-index: -1;
+}
+
+#foreground{
+	z-index: 2;
+}
+
+#altered{
+	z-index: 1;
+}
+
+#userimg{
+}
+
+
+/*Animation*/
+@keyframes transformationUser{
+	0%{
+		opacity: 100%;
+	}
+	10%{
+		filter: brightness(300%);
+	}
+	20%{
+		filter: brightness(100%);
+	}
+	30%{
+		filter: brightness(300%);
+	}
+	40%{
+		filter: brightness(100%);
+	}
+	50%{
+		filter: brightness(300%);
+	}
+	59%{
+		opacity: 100%;
+	}
+	60%{
+		filter: brightness(100%);
+		opacity: 0%;
+	}
+	100%{
+		opacity: 0%;
+	}
+}
+
+@keyframes transformationAltered{
+	0%{
+		opacity: 0%;
+	}
+	59%{
+		opacity: 0%;
+	}
+	60%{
+		opacity: 100%;
+	}
+	100%{
+		opacity: 100%;
+	}
+}
