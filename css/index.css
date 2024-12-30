@@ -107,3 +107,19 @@ img {
 		opacity: 100%;
 	}
 }
+
+
+/*Media-Querys*/
+@media (max-width: 768px) {
+	*{
+		font-size: 20px;
+	}
+	
+	body{
+		gap: 30px;
+	}
+	.img-container{
+		width: 100vw;
+		border-radius: 0px;
+	}
+}
